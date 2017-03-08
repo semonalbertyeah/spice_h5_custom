@@ -26,5 +26,8 @@ cp tmp/spice-html5.spec ~/rpmbuild/SPECS/
 
 echo 'building...'
 rpmbuild -bb ~/rpmbuild/SPECS/spice-html5.spec
-#mv ~/rpmbuild/RPMS/noarch/
+
+
+mv ~/rpmbuild/RPMS/noarch/spice-html5-custom-0.1.6-1.noarch.rpm tmp/dist/
+echo 'tmp/dist/spice-html5-custom-0.1.6-1.noarch.rpm'
 
