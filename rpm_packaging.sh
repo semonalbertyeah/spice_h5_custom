@@ -28,10 +28,12 @@ cp change.diff spice-html5.tar.gz ~/rpmbuild/SOURCES/
 cp spice-html5.spec ~/rpmbuild/SPECS/
 
 echo 'building...'
-rpmbuild -bb ~/rpmbuild/SPECS/spice-html5.spec
+rpmbuild -ba ~/rpmbuild/SPECS/spice-html5.spec
 
 
 mv ~/rpmbuild/RPMS/noarch/spice-html5-custom-0.1.6-1.noarch.rpm dist/
+mv ~/rpmbuild/SRPMS/spice-html5-custom-0.1.6-1.src.rpm dist/
 echo 'tmp/dist/spice-html5-custom-0.1.6-1.noarch.rpm'
+echo 'tmp/dist/spice-html5-custom-0.1.6-1.src.rpm'
 cd ..
 
