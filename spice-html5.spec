@@ -20,7 +20,7 @@ file for Apache, but should work with any web server.
 %prep
 %setup -q -n spice-html5
 # added
-%patch0 -p0
+%patch0 -p1
 
 
 %build
