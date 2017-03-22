@@ -88,15 +88,17 @@ function handle_mousemove(e)
     }
     if (this.sc && this.sc.inputs && this.sc.inputs.state === "ready")
     {
-        if (this.sc.inputs.waiting_for_ack < (2 * SPICE_INPUT_MOTION_ACK_BUNCH))
-        {
-            this.sc.inputs.send_msg(msg);
-            this.sc.inputs.waiting_for_ack++;
-        }
-        else
-        {
-            DEBUG > 0 && this.sc.log_info("Discarding mouse motion");
-        }
+        // if (this.sc.inputs.waiting_for_ack < (2 * SPICE_INPUT_MOTION_ACK_BUNCH))
+        // {
+        //     this.sc.inputs.send_msg(msg);
+        //     this.sc.inputs.waiting_for_ack++;
+        // }
+        // else
+        // {
+        //     DEBUG > 0 && this.sc.log_info("Discarding mouse motion");
+        // }
+        this.sc.inputs.send_msg(msg);
+        this.sc.inputs.waiting_for_ack++;
     }
 
     if (this.sc && this.sc.cursor && this.sc.cursor.spice_simulated_cursor)
